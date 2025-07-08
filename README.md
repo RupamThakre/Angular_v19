@@ -1,4 +1,4 @@
-# Angular Version 19 Ceoncepts
+# Angular Version 19 Concepts
 Topics :
 1. Angular Signals
 2. Angular Standalone Components
