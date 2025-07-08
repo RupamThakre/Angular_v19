@@ -27,3 +27,11 @@ Signals - A different way of detecting changes
 - slightly more work, But full control, better performance & smaller bundle.
 
 # Creating a Signal
+ [Without signal] counter = 0;  -> {{counter}}
+ [With signal] counter = signal(0); -> {{counter()}}
+
+ [Without signal] increment(){counter++;}
+ [With signal] increment(){counte.update(oldValue => oldValue + 1;)}
+ 
+[Without signal] decrement(){counter--;}
+ [With signal] decrement(){counter.update(oldValue => oldValue - 1;)}
