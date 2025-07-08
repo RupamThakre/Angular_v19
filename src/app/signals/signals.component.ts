@@ -21,6 +21,13 @@ export class SignalsComponent {
    .mutate - based on old value
    */ 
     this.counter.update((oldCounter) => oldCounter + 1);
+
+
+    //.set()
+    this.counter.set(this.counter() + 1); //alternative of .update()
+
+    //.mutate()
+
     this.actions.push('INCREMENT');
   }
 

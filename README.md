@@ -35,3 +35,20 @@ Signals - A different way of detecting changes
  
 [Without signal] decrement(){counter--;}
  [With signal] decrement(){counter.update(oldValue => oldValue - 1;)}
+
+ # 3 methods of updating signals values
+ 1. .set(counter() + 1);
+ 2. .update(oldValue => oldValue +1);
+ 3. .mutate()
+
+# future advancement
+
+In the future, you'll be able to mark components as signal-based (presumably by adding the signals: true flag to @Component) to let Angular know that it should not use its regular change detection algorithm in such components.
+
+And that's just one feature, of course. In signal-based components, you'll also be able to get rid of many decorators like @Input() or @Output() (and others). You would use special functions instead:
+
+@Input() title: string;
+
+would become
+
+title = input<string>();
