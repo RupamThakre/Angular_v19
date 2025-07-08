@@ -56,3 +56,33 @@ Step 4 - for now Add DetailsComponent inside the imports array of @NgModule
 @NgModule({
     imports : [sharedModule, browserModule, DetailsComponent]
 })
+
+# Twist : Migrating Root Component 
+- what will happen if you migrate AppComponent ?
+
+@Component({
+    standalone : true
+})
+
+- remove it from @NgModule - declarations array 
+
+- Also need to change in main.ts
+
+EARLIER
+
+platformBrowserDynamic().bootstrapModule(AppModule).catch(err=>console.err(err));
+
+NOW
+
+- Remove the above line and use bootstrapApplication()
+
+import { bootstrapApplication } from '@angular/platform-browser';
+bootstrapApplication(AppComponent);
+
+- you woudl also not need app.module.ts file anymore - remove it
+
+# Lazy loading for a specific component 
+
+Earlier if we want to perform lazy loading, then would need to call whole module using 'loadChildern'
+Now you could load individual component lazyily , Only present in Standalone component.
+
