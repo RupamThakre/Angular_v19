@@ -1,4 +1,4 @@
-# Angular Version 19 Basics
+# Angular Version 19 Ceoncepts
 Topics :
 1. Angular Signals
 2. Angular Standalone Components
